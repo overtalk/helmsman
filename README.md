@@ -27,7 +27,7 @@
 
 ## Install
 ```bash
-go get github.com/qinhan-shu/config
+go get github.com/overtalk/helmsman
 ```
 
 
@@ -41,8 +41,8 @@ import (
 	"io/ioutil"
 	"os"
 
-	"github.com/qinhan-shu/config"
-	fileSource "github.com/qinhan-shu/config/source/file"
+	"github.com/overtalk/helmsman"
+	fileSource "github.com/overtalk/helmsman/source/file"
 )
 
 const str = `{
