@@ -4,6 +4,7 @@
 --- 
 
 [![Go Report Card](https://goreportcard.com/badge/github.com/overtalk/helmsman)](https://goreportcard.com/report/github.com/overtalk/helmsman)
+[![Coverage Status](https://coveralls.io/repos/github/overtalk/helmsman/badge.svg?branch=master)](https://coveralls.io/github/overtalk/helmsman?branch=master)
 
 ## Why use?
 - [x] multi-format
