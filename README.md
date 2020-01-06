@@ -1,25 +1,21 @@
 # Golang Configuration Hub
 
 ## Why use?
--[x] multi-format
--[x] multi-source
--[x] data format & data source separation
--[ ] watching changes
-
-### Included Format
--[x] Json
--[x] Yaml
--[x] Envionment vars
--[ ] xml
--[ ] ini
-
-### Included Source
--[x] Local File
--[x] Github Repo
--[x] Gitlab Repo
--[x] Aliyun OSS
--[ ] Etcd
--[ ] Consul
+- [x] multi-format
+    - [x] Json
+    - [x] Yaml
+    - [x] Envionment vars
+    - [ ] xml
+    - [ ] ini
+- [x] multi-source
+    - [x] Local File
+    - [x] Github Repo
+    - [x] Gitlab Repo
+    - [x] Aliyun OSS
+    - [ ] Etcd
+    - [ ] Consul
+- [x] data format & data source separation
+- [ ] watching changes
 
 ## Install
 ```bash
