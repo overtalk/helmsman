@@ -106,4 +106,4 @@ func GetConfigFromGithub() (*ConfigDemo, error) {
 ```
 
 ## Tools
--[ ] Config Struct Builder tool
+- [ ] Config Struct Builder tool
