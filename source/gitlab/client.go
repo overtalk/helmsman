@@ -39,11 +39,11 @@ func (c *Client) Client() (*gitlab.Client, error) {
 	return c.git, nil
 }
 
-func (c *Client) ParseConfig(parser config.Parser, cfg interface{}) error {
+func (c *Client) ParseConfig(t config.ParserType, cfg interface{}) error {
 	data, err := c.Fetch(c.cfg.Path)
 	if err != nil {
 		return err
 	}
 
-	return parser.Parse(data, cfg)
+	return config.GetParser(t).Parse(data, cfg)
 }

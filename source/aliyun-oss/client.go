@@ -65,11 +65,11 @@ func (f *Client) Client() (*oss.Client, error) {
 	return f.client, nil
 }
 
-func (f *Client) ParseConfig(parser config.Parser, cfg interface{}) error {
+func (f *Client) ParseConfig(t config.ParserType, cfg interface{}) error {
 	data, err := f.GetObject(f.cfg.Path)
 	if err != nil {
 		return err
 	}
 
-	return parser.Parse(data, cfg)
+	return config.GetParser(t).Parse(data, cfg)
 }

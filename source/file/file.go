@@ -25,11 +25,11 @@ func GetBytes(filePath string) ([]byte, error) {
 	return ioutil.ReadAll(file)
 }
 
-func (f *FileConfig) ParseConfig(parser config.Parser, cfg interface{}) error {
+func (f *FileConfig) ParseConfig(t config.ParserType, cfg interface{}) error {
 	data, err := GetBytes(f.path)
 	if err != nil {
 		return err
 	}
 
-	return parser.Parse(data, cfg)
+	return config.GetParser(t).Parse(data, cfg)
 }
