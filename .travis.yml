@@ -7,6 +7,7 @@ go:          # 语言版本号
 
 before_script:
   - go get ./...
+  - export GO111MODULE=on
 
 script:      # 执行的脚步，但是go默认会执行下面的这些命令的，所以可以不用写
   - go test -v ./...
