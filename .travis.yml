@@ -6,6 +6,8 @@ go:          # 语言版本号
   - "1.13.x"
 
 env:
+  - service_name: System.getenv(service_name)
+  - repo_token: System.getenv(repo_token)
   - GO111MODULE=on
 
 before_script:
