@@ -1,4 +1,9 @@
-# Golang Configuration Hub
+# Helmsman
+<center> Helmsman is a Golang Configuration Hub 
+
+--- 
+
+[![Go Report Card](https://goreportcard.com/badge/github.com/overtalk/helmsman)](https://goreportcard.com/report/github.com/overtalk/helmsman)
 
 ## Why use?
 - [x] multi-format
