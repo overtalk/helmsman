@@ -5,7 +5,7 @@
     - [x] Json
     - [x] Yaml
     - [x] Envionment vars
-    - [ ] xml
+    - [x] Xml
     - [ ] ini
 - [x] multi-source
     - [x] Local File
