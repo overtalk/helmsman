@@ -1,6 +1,13 @@
 language:    # 指明使用的语言
   - go
 
+notifications: # 每次构建的时候是否通知，如果不想收到通知，那就设置false吧(email: false,也可以是Slack)
+  email:
+    recipients:
+      - qinhan_shu@163.com
+  on_success: change
+  on_failure: always
+
 go:          # 语言版本号
   - "1.12.x"   # 默认使用最新版本,注意，需要 "1.10" 版本的时候必须表示为字符串形式，如果写成 1.10 则会使用 1.1 版本;x表示对应前缀的最新版本
   - "1.13.x"
@@ -10,14 +17,21 @@ env:
 
 before_script:
   - go get ./...
-  - go get github.com/go-playground/overalls #overalls能够支持到各级子目录
-  - go get github.com/mattn/goveralls #goveralls是coveralls对golang的测试覆盖率支持命令
 
 script:      # 执行的脚步，但是go默认会执行下面的这些命令的，所以可以不用写
-  - overalls -project=github.com/yangwenmai/ratelimit -covermode=count -ignore='.git,_vendor'
-  - goveralls -coverprofile=overalls.coverprofile -service=travis-ci -repotoken $repo_token
-  - go test -race -coverprofile=coverage.txt -covermode=atomic
   - go test ./...
 
-after_success:
-  - bash <(curl -s https://codecov.io/bash)
+---
+language: go
+
+go:
+  - 1.12.x
+
+before_install:
+  - go get golang.org/x/tools/cmd/cover
+  - go get github.com/mattn/goveralls
+
+script:
+  - go test -v -covermode=count -coverprofile=coverage.out
+  - $HOME/gopath/bin/goveralls -coverprofile=coverage.out -service=travis-ci -repotoken $repo_token
+  - $(go env GOPATH | awk 'BEGIN{FS=":"} {print $1}')/bin/goveralls -coverprofile=coverage.out -service=travis-ci -repotoken $repo_token
