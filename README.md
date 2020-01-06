@@ -2,20 +2,24 @@
 
 ## Why use?
 -[x] multi-format
-    -[x] Json
-    -[x] Yaml
-    -[x] Envionment vars
-    -[ ] xml
-    -[ ] ini
 -[x] multi-source
-    -[x] Local File
-    -[x] Github Repo
-    -[x] Gitlab Repo
-    -[x] Aliyun OSS
-    -[ ] Etcd
-    -[ ] Consul
 -[x] data format & data source separation
 -[ ] watching changes
+
+### Included Format
+-[x] Json
+-[x] Yaml
+-[x] Envionment vars
+-[ ] xml
+-[ ] ini
+
+### Included Source
+-[x] Local File
+-[x] Github Repo
+-[x] Gitlab Repo
+-[x] Aliyun OSS
+-[ ] Etcd
+-[ ] Consul
 
 ## Install
 ```bash
@@ -33,27 +37,24 @@ import (
 	"io/ioutil"
 	"os"
 
-	"github.com/qinhan-shu/config/parser/json"
-	"github.com/qinhan-shu/config/source/file"
+	"github.com/qinhan-shu/config"
+	fileSource "github.com/qinhan-shu/config/source/file"
 )
 
-// str is your json config file details
 const str = `{
     "A": "this is the test of a ",
     "B": "this is the test of bbb"
 }`
 
-// ConfigDemo defines your config struct
 type ConfigDemo struct {
 	A string `json:"A"`
 	B string `json:"B"`
 }
 
-// GetConfig show the usage of this repo
 func GetConfig(path string) (*ConfigDemo, error) {
 	c := &ConfigDemo{}
-	fc := source.NewFileConfig(path)
-	if err := fc.ParseConfig(&parser.JsonParser{}, c); err != nil {
+	fc := fileSource.NewFileConfig(path)
+	if err := fc.ParseConfig(config.JsonFormat, c); err != nil {
 		return nil, err
 	}
 
@@ -84,6 +85,7 @@ func main() {
 	fmt.Println(c.A)
 	fmt.Println(c.B)
 }
+
 ```
 
 ### change to github config source
@@ -99,7 +101,7 @@ func GetConfigFromGithub() (*ConfigDemo, error) {
 		Path:  "your config file path in the repo",
 	}
 	githubClient := githubSource.NewClient(cfg)
-	if err := githubClient.ParseConfig(&parser.JsonParser{}, c); err != nil {
+	if err := githubClient.ParseConfig(config.JsonFormat, c); err != nil {
 		return nil, err
 	}
 
