@@ -10,12 +10,14 @@ env:
 
 before_script:
   - go get ./...
-  - go get code.google.com/p/go.tools/cmd/cover
-  - go get github.com/mattn/goveralls
-  - go get github.com/bmizerany/assert
+  - go get github.com/go-playground/overalls #overalls能够支持到各级子目录
+  - go get github.com/mattn/goveralls #goveralls是coveralls对golang的测试覆盖率支持命令
 
 script:      # 执行的脚步，但是go默认会执行下面的这些命令的，所以可以不用写
-  - go test -v ./...
-  - go test --bench=".*" -v
-  - go test -v -covermode=count -coverprofile=coverage.out
-  - $HOME/gopath/bin/goveralls -coverprofile=coverage.out -service=travis-ci -repotoken $repo_token
+  - overalls -project=github.com/yangwenmai/ratelimit -covermode=count -ignore='.git,_vendor'
+  - goveralls -coverprofile=overalls.coverprofile -service=travis-ci -repotoken $repo_token
+  - go test -race -coverprofile=coverage.txt -covermode=atomic
+  - go test ./...
+
+after_success:
+  - bash <(curl -s https://codecov.io/bash)
