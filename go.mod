@@ -1,4 +1,4 @@
-module config
+module helmsman
 
 go 1.13
 

@@ -1,13 +1,13 @@
 package source_test
 
 import (
-	"config"
 	"fmt"
 	"io/ioutil"
 	"os"
 	"testing"
 
-	. "config/source/file"
+	"helmsman"
+	. "helmsman/source/file"
 )
 
 const str = `{

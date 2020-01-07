@@ -4,7 +4,7 @@ import (
 	"os"
 	"testing"
 
-	. "config/source/env"
+	. "helmsman/source/env"
 )
 
 type ConfigDemo struct {

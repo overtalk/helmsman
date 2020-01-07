@@ -3,7 +3,7 @@ package parser_test
 import (
 	"testing"
 
-	. "config/parser/yml"
+	. "helmsman/parser/yml"
 )
 
 const str = `LogLevel: debug

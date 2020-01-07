@@ -4,7 +4,7 @@ import (
 	"encoding/xml"
 	"testing"
 
-	. "config/parser/xml"
+	. "helmsman/parser/xml"
 )
 
 const str = `<?xml version="1.0" encoding="utf-8" standalone="yes"?>

@@ -1,7 +1,7 @@
 package env
 
 import (
-	"config"
+	"helmsman"
 	"github.com/caarlos0/env"
 )
 

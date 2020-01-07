@@ -1,7 +1,7 @@
 package github
 
 import (
-	"config"
+	"helmsman"
 	"context"
 	"errors"
 

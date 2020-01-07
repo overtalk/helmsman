@@ -1,7 +1,7 @@
 package source
 
 import (
-	"config"
+	"helmsman"
 	"errors"
 
 	"github.com/xanzy/go-gitlab"

@@ -1,7 +1,7 @@
 package source
 
 import (
-	"config"
+	"helmsman"
 	"io/ioutil"
 	"os"
 )
