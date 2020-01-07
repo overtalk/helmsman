@@ -5,6 +5,7 @@
 
 [![Go Report Card](https://goreportcard.com/badge/github.com/overtalk/helmsman)](https://goreportcard.com/report/github.com/overtalk/helmsman)
 [![Coverage Status](https://coveralls.io/repos/github/overtalk/helmsman/badge.svg?branch=master)](https://coveralls.io/github/overtalk/helmsman?branch=master)
+[![Build Status](https://travis-ci.org/overtalk/helmsman.svg?branch=master)](https://travis-ci.org/overtalk/helmsman)
 ![GitHub stars](https://img.shields.io/github/stars/overtalk/helmsman.svg?style=flat-square&label=Stars&style=flat-square)
 ![GitHub issues](https://img.shields.io/github/issues-raw/overtalk/helmsman.svg?style=flat-square)
 
