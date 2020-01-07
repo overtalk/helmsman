@@ -114,6 +114,7 @@ func GetConfigFromGithub() (*ConfigDemo, error) {
 }
 ```
 
-## Tools
+## config struct build tools
 - [x] [json生成golang结构体工具](https://mholt.github.io/json-to-go/)
-- [ ] Config Struct Builder tool
+- [x] [yaml生成golang结构体工具](https://mengzhuo.github.io/yaml-to-go/)
+- [x] [xml生成golang结构体工具](https://www.onlinetool.io/xmltogo)
