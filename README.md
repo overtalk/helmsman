@@ -1,5 +1,7 @@
-# Helmsman
-<center> Helmsman is a Golang Configuration Hub 
+English | [简体中文](./README_CN.md)
+
+<p align="center"> Helmsman </p>
+<p align="center">Helmsman is a Golang Configuration Hub </p>
 
 --- 
 
