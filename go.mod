@@ -3,6 +3,7 @@ module helmsman
 go 1.13
 
 require (
+	github.com/BurntSushi/toml v0.3.1
 	github.com/aliyun/aliyun-oss-go-sdk v2.0.5+incompatible
 	github.com/caarlos0/env v3.5.0+incompatible
 	github.com/cenkalti/backoff v2.2.1+incompatible // indirect
