@@ -23,8 +23,8 @@ English | [简体中文](./README_CN.md)
     - [x] Github Repo
     - [x] Gitlab Repo
     - [x] Aliyun OSS
+    - [x] Consul
     - [ ] Etcd
-    - [ ] Consul
 - [x] data format & data source separation
 - [ ] watching changes
 

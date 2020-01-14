@@ -23,8 +23,8 @@
     - [x] Github 仓库
     - [x] Gitlab 仓库
     - [x] 阿里云 OSS
+    - [x] Consul
     - [ ] Etcd
-    - [ ] Consul
 - [x] `数据格式` 与 `数据源`分离
 - [ ] 配置变更通知
 

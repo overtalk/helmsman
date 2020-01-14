@@ -24,7 +24,7 @@ func TestEnvConfig_ParseConfig(t *testing.T) {
 
 	e := &EnvConfig{}
 	c := &ConfigDemo{}
-	if err := e.ParseConfig(nil, c); err != nil {
+	if err := e.ParseConfig(c); err != nil {
 		t.Error(err)
 		return
 	}
