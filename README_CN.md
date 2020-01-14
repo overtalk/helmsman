@@ -17,6 +17,7 @@
     - [x] Yaml
     - [x] Envionment vars
     - [x] Xml
+    - [x] Toml
     - [ ] ini
 - [x] 多数据源
     - [x] 本地文件
@@ -119,3 +120,4 @@ func GetConfigFromGithub() (*ConfigDemo, error) {
 - [x] [json 转 golang struct 工具](https://mholt.github.io/json-to-go/)
 - [x] [yaml 转 golang struct 工具](https://mengzhuo.github.io/yaml-to-go/)
 - [x] [xml 转 golang struct 工具](https://www.onlinetool.io/xmltogo)
+- [x] [toml 转 golang struct 工具](https://xuri.me/toml-to-go/)

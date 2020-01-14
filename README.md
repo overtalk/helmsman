@@ -17,6 +17,7 @@ English | [简体中文](./README_CN.md)
     - [x] Yaml
     - [x] Envionment vars
     - [x] Xml
+    - [x] Toml
     - [ ] ini
 - [x] multi-source
     - [x] Local File
@@ -120,3 +121,4 @@ func GetConfigFromGithub() (*ConfigDemo, error) {
 - [x] [json to go struct](https://mholt.github.io/json-to-go/)
 - [x] [yaml to go struct](https://mengzhuo.github.io/yaml-to-go/)
 - [x] [xml to go struct](https://www.onlinetool.io/xmltogo)
+- [x] [toml to go struct](https://xuri.me/toml-to-go/)
