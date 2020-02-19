@@ -1,7 +1,7 @@
 package source
 
 import (
-	"helmsman"
+	"github.com/overtalk/helmsman"
 	"io/ioutil"
 	"os"
 )

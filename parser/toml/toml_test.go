@@ -3,7 +3,7 @@ package parser_test
 import (
 	"testing"
 
-	. "helmsman/parser/toml"
+	. "github.com/overtalk/helmsman/parser/toml"
 )
 
 const str = `

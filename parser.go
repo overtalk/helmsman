@@ -1,8 +1,8 @@
 package config
 
 import (
-	jsonParser "helmsman/parser/json"
-	ymlParser "helmsman/parser/yml"
+	jsonParser "github.com/overtalk/helmsman/parser/json"
+	ymlParser "github.com/overtalk/helmsman/parser/yml"
 )
 
 type ParserType string

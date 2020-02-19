@@ -3,7 +3,7 @@ package parser_test
 import (
 	"testing"
 
-	. "helmsman/parser/json"
+	. "github.com/overtalk/helmsman/parser/json"
 )
 
 const str = `{

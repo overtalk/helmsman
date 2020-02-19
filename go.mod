@@ -1,4 +1,4 @@
-module helmsman
+module github.com/overtalk/helmsman
 
 go 1.13
 

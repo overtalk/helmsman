@@ -1,7 +1,7 @@
 package source
 
 import (
-	"helmsman"
+	"github.com/overtalk/helmsman"
 	"errors"
 
 	"github.com/xanzy/go-gitlab"

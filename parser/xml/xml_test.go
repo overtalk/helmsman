@@ -4,7 +4,7 @@ import (
 	"encoding/xml"
 	"testing"
 
-	. "helmsman/parser/xml"
+	. "github.com/overtalk/helmsman/parser/xml"
 )
 
 const str = `<?xml version="1.0" encoding="utf-8" standalone="yes"?>

@@ -1,7 +1,7 @@
 package aliyun_oss
 
 import (
-	"helmsman"
+	"github.com/overtalk/helmsman"
 	"errors"
 
 	"github.com/aliyun/aliyun-oss-go-sdk/oss"

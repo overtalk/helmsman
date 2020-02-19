@@ -1,13 +1,12 @@
-package source_test
+package main
 
 import (
 	"fmt"
 	"io/ioutil"
 	"os"
-	"testing"
 
 	"github.com/overtalk/helmsman"
-	. "github.com/overtalk/helmsman/source/file"
+	fileSource "github.com/overtalk/helmsman/source/file"
 )
 
 const str = `{
@@ -20,7 +19,17 @@ type ConfigDemo struct {
 	B string `json:"B"`
 }
 
-func TestFileConfig_ParseConfig(t *testing.T) {
+func GetConfig(path string) (*ConfigDemo, error) {
+	c := &ConfigDemo{}
+	fc := fileSource.NewFileConfig(path)
+	if err := fc.ParseConfig(config.JsonFormat, c); err != nil {
+		return nil, err
+	}
+
+	return c, nil
+}
+
+func main() {
 	// write config data to tmp file
 	tmpFile, err := ioutil.TempFile("", "temp_file")
 	if err != nil {
@@ -35,13 +44,12 @@ func TestFileConfig_ParseConfig(t *testing.T) {
 		return
 	}
 
-	fc := NewFileConfig(tmpFile.Name())
-	c := &ConfigDemo{}
-	if err := fc.ParseConfig(config.JsonFormat, c); err != nil {
-		t.Error(err)
+	c, err := GetConfig(tmpFile.Name())
+	if err != nil {
+		fmt.Println(err)
 		return
 	}
 
-	t.Log(c.A)
-	t.Log(c.B)
+	fmt.Println(c.A)
+	fmt.Println(c.B)
 }

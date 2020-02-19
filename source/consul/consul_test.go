@@ -3,7 +3,7 @@ package consul_test
 //import (
 //	"testing"
 //
-//	. "helmsman/source/consul"
+//	. "github.com/overtalk/helmsman/source/consul"
 //)
 //
 //type Config struct {

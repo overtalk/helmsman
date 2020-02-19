@@ -4,7 +4,7 @@ import (
 	"os"
 	"testing"
 
-	. "helmsman/source/env"
+	. "github.com/overtalk/helmsman/source/env"
 )
 
 type ConfigDemo struct {

@@ -1,7 +1,7 @@
 package github
 
 import (
-	"helmsman"
+	"github.com/overtalk/helmsman"
 	"context"
 	"errors"
 
